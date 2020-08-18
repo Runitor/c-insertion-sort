@@ -9,8 +9,8 @@
 
 /*** Function to print an array ***/
 
-void print_array(int *arr, size_t size) {
-	for (size_t i = 0; i < size; i++) {
+void print_array(int *arr, int size) {
+	for (int i = 0; i < size; i++) {
 		printf("%d ", arr[i]);
 	}
 	printf("\n");
@@ -18,19 +18,15 @@ void print_array(int *arr, size_t size) {
 
 /*** Function to sort an array using insertion sort ***/
 
-void insertion_sort(int *arr, size_t size) {
-
-	int key;
-	size_t i;
-
-	for (size_t j = 1; j < size; j++) {
-		key = arr[j];
-		i = j - 1;
-		while (i >= 0 && arr[i] > key) {
-			arr[i+1] = arr[i];
-			i--;
+void insertion_sort(int *arr, int size) {
+	for (int i = 1; i < size; i++) {
+  		int key = arr[i];
+		int j = i - 1;
+		while (key < arr[j] && j >= 0) {
+			arr[j + 1] = arr[j];
+			--j;
 		}
-		arr[i+1] = key;
+		arr[j + 1] = key;
 	}
 }
 
@@ -39,10 +35,10 @@ void insertion_sort(int *arr, size_t size) {
 int main() {
 	
 	int arr1[] = {5, 2, 4, 6, 1, 3};
-	size_t size1 = sizeof(arr1) / sizeof(arr1[0]);
+	int size1 = sizeof(arr1) / sizeof(arr1[0]);
 
-	int arr2[] = {31, 41, 59, 32, 41, 58};
-	size_t size2 = sizeof(arr2) / sizeof(arr2[0]);
+	int arr2[] = {31, 41, 59, 26, 41, 58};
+	int size2 = sizeof(arr2) / sizeof(arr2[0]);
 
 	insertion_sort(arr1, size1);
 	insertion_sort(arr2, size2);
