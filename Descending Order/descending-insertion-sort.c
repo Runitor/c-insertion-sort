@@ -1,6 +1,6 @@
 // Aug 18, 2020
 // Runitor
-// Insertion sort in ascending order
+// Insertion sort in descending order
 
 /*** includes ***/
 
