@@ -1,2 +1,2 @@
-# c-insertion-sort
-Insertion sort
+# Insertion sort in C
+placeholder
