@@ -4,7 +4,6 @@
 
 /*** includes ***/
 
-#include <stddef.h>
 #include <stdio.h>
 
 /*** Function to print an array ***/
