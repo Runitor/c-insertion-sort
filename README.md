@@ -1,1 +1,1 @@
-# Insertion sort in C
+# [C] Insertion sort algorithm
